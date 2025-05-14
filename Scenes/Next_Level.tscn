@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvaaxr0csmhus"]
+
+[ext_resource type="Script" path="res://Scripts/Next_Level.gd" id="1_gar23"]
+[ext_resource type="Texture2D" uid="uid://dthvqcw6noa7h" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_lht7v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sjug"]
+radius = 14.0
+
+[node name="Next_Level" type="Area2D"]
+script = ExtResource("1_gar23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0sjug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.25)
+scale = Vector2(1, 0.970588)
+texture = ExtResource("2_lht7v")
+region_enabled = true
+region_rect = Rect2(63.6745, 31.648, 16.4859, 17.7021)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

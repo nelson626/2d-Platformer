@@ -1,0 +1,224 @@
+[gd_scene load_steps=28 format=3 uid="uid://hs0b6m2iayhu"]
+
+[ext_resource type="Texture2D" uid="uid://c7sya7sd2yxbl" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="1_6dr16"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_s8yr4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vkq8"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tklhw"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weri5"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0wn7"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hf6w"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi4kx"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgpvx"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gukh"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pimax"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5i4u"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sxa6"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rkjc"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuuni"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6j5m"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjp37"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhhre"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4gph"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qekey"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv1me"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ak28"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uimk5"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kmd1"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm12r"]
+atlas = ExtResource("1_6dr16")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qoefh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vkq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tklhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weri5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0wn7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hf6w")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_mi4kx")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgpvx")
+}],
+"loop": false,
+"name": &"jump_hold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gukh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pimax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5i4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sxa6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rkjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuuni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6j5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjp37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhhre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4gph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qekey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv1me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ak28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uimk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kmd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm12r")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6j8a"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 5
+collision_mask = 2
+script = ExtResource("1_s8yr4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_qoefh")
+animation = &"jump"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.621795
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_f6j8a")
+
+[node name="Coyote_timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -8)
+zoom = Vector2(3, 3)
+limit_bottom = 200
+
+[node name="wall_jump_x_disable" type="Timer" parent="."]
+wait_time = 0.904
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

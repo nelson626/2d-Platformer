@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://qwh0qjbub6y4"]
+
+[ext_resource type="Script" path="res://Interactive_sign.gd" id="1_aln77"]
+[ext_resource type="Texture2D" uid="uid://dthvqcw6noa7h" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_5ld4f"]
+[ext_resource type="FontFile" uid="uid://nr3juxi1jjcr" path="res://Assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_bkmr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xket"]
+size = Vector2(11, 15)
+
+[node name="Interactive_sign" type="Area2D"]
+script = ExtResource("1_aln77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, -2)
+scale = Vector2(1.66617, 1.31596)
+shape = SubResource("RectangleShape2D_8xket")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9, -3)
+scale = Vector2(1.07031, 0.976563)
+texture = ExtResource("2_5ld4f")
+region_enabled = true
+region_rect = Rect2(128.073, 47.964, 15.4217, 17.3494)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -170.0
+offset_top = -52.0
+offset_right = 46.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("3_bkmr0")
+text = "Keep Going!
+Half Way There!
+"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
