@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3f83hkyxwir"]
+[gd_scene load_steps=7 format=3 uid="uid://c3f83hkyxwir"]
 
 [ext_resource type="Texture2D" uid="uid://dthvqcw6noa7h" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_d4nxq"]
 [ext_resource type="PackedScene" uid="uid://8u3paremg0th" path="res://Scenes/checkpoint.tscn" id="2_pe6ha"]
 [ext_resource type="PackedScene" uid="uid://hs0b6m2iayhu" path="res://Scenes/player.tscn" id="3_fm2so"]
+[ext_resource type="FontFile" uid="uid://nr3juxi1jjcr" path="res://Assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="4_evw1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43qnd"]
 texture = ExtResource("1_d4nxq")
@@ -425,3 +426,15 @@ layer_1/tile_data = PackedInt32Array()
 position = Vector2(1, -1)
 
 [node name="Player" parent="." instance=ExtResource("3_fm2so")]
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -103.0
+offset_top = -61.0
+offset_right = 81.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("4_evw1x")
+theme_override_font_sizes/font_size = 16
+text = "Level 2 is unfinished!"
+autowrap_mode = 3
